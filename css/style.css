@@ -5,3 +5,89 @@ p{
     background-color: aquamarine;
     font-size: 20px;
 }
+.first-paragraph{
+    color: blueviolet;
+}
+.second-paragraph{
+    color: crimson;
+}
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: bisque;
+}
+/* if it starts with . it is for class, and it is start with # it is for id      */
+.header {
+    background-color: aqua;
+    background-position: center ;
+    height: 50vh;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    font-size: 30px;
+    justify-content: center;
+    background-image: url(/Data/bannerGreen.jpg) ;
+}
+#wrapper {
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: gold;
+}
+.profileImage {
+    background-color: azure;
+    height: 10vh;
+    column-width: auto;
+
+
+}
+.profile-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: auto;
+    background-color:cornflowerblue;
+
+
+
+}
+
+.sub-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: auto;
+
+}
+
+.introduction-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: auto;
+    background-color:rgb(55, 141, 89);
+
+}
+
+
+/* .header-container {
+    background-image: url(/Week_3_Exercises/Data/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    text-align: center;
+    
+} */
+
+/* .navigate {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+} */
