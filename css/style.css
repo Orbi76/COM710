@@ -1,7 +1,7 @@
 body {
     background: lightgrey;
 }
-p{
+p {
     background-color: aquamarine;
     font-size: 20px;
 }
@@ -72,22 +72,36 @@ p{
 
 }
 
-
-/* .header-container {
-    background-image: url(/Week_3_Exercises/Data/background.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
+.sud-introductionLeft {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    text-align: center;
-    
-} */
-
-/* .navigate {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: auto;
+    background-color: beige;
+    width: 75%;
+}
+.sud-introductionRight {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: auto;
+    background-color: beige;
+    width: 25%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
-    list-style-type: none;
-} */
+    align-items: center;
+    padding: auto;
+    background-color:cornflowerblue;
+
+}
+.sub-footerRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: auto;
+
+}
