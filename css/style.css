@@ -5,28 +5,60 @@ p {
     background-color: aquamarine;
     font-size: 20px;
 }
-.first-paragraph{
-    color: blueviolet;
-}
-.second-paragraph{
-    color: crimson;
+.navigation{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top:0;
+    
 }
 .navbar {
     display: flex;
     justify-content: space-evenly;
-    background-color: bisque;
+    background-color: rgb(172, 170, 168);
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
+.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+  
+li a:hover {
+    background-color: #cd1523;
+    font-size: larger;
+    color: black;
+}
+  
+ 
 /* if it starts with . it is for class, and it is start with # it is for id      */
 .header {
     background-color: aqua;
     background-position: center ;
     height: 50vh;
     display: flex;
-    align-content: center;
-    text-align: center;
+    align-content: left;
     font-size: 30px;
-    justify-content: center;
-    background-image: url(/Data/bannerGreen.jpg) ;
+    /* justify-content: space-evenly; */
+    /* background-image: url(/Data/bannerGreen.jpg) ; */
+    background-image: url(https://www.solent.ac.uk/cms/media-library/images/hero-banners/homepage/806.xfb4e19ef.jpg?w=3840&q=100&f=webp) ;
+}
+.headerParagraph{
+    font-size: 50px;
+    color: rgb(90, 31, 31);
+    align-content: center;
+    background-color: transparent;
+}
+
+.solentLogo {
+    align-content: center;
+    /* display: flex;
+    align-content: start;
+    justify-content: left; */
 }
 #wrapper {
     height: 10vh;
@@ -39,6 +71,7 @@ p {
     background-color: azure;
     height: 10vh;
     column-width: auto;
+    align-items: center;
 
 
 }
@@ -59,6 +92,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
     padding: auto;
+    align-items: center;
 
 }
 
@@ -76,6 +110,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     padding: auto;
     background-color: beige;
     width: 75%;
@@ -84,6 +119,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     padding: auto;
     background-color: beige;
     width: 25%;
@@ -98,10 +134,8 @@ p {
     background-color:cornflowerblue;
 
 }
-.sub-footerRight {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: auto;
 
+.sub-footer {
+    flex: 1;
+    padding: 20px;
 }

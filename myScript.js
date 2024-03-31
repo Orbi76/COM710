@@ -1,4 +1,5 @@
 
+// Function to display opinion
 document.addEventListener("DOMContentLoaded", function() {
     var languageSelect = document.querySelector('select[data-placeholder="Choose a Language..."]');
     var languagePar = document.getElementById('languagePar');
@@ -23,6 +24,34 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+
+// Function to visitor count
+function incrementVisitorCount() {
+    if (localStorage.getItem('visitorCount')) {
+        let count = parseInt(localStorage.getItem('visitorCount'));
+        count++;
+        localStorage.setItem('visitorCount', count);
+    } else {
+        localStorage.setItem('visitorCount', 1);
+    }
+}
+
+// Function to display it on the page
+function displayVisitorCount() {
+    let count = parseInt(localStorage.getItem('visitorCount'));
+    let counterElement = document.getElementById('visitorCounter');
+    counterElement.textContent = `Total visitors: ${count}`;
+}
+
+// Call the functions when the page loads
+window.onload = function () {
+    incrementVisitorCount();
+    displayVisitorCount();
+};
+
+
 
 
 
