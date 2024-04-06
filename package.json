@@ -1,16 +1,20 @@
 {
   "name": "feladat",
   "version": "1.0.0",
-  "description": "",
   "main": "myScript.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.19.2",
+    "libphonenumber-js": "^1.10.60",
+    "mysql": "^2.18.1",
     "sqlite3": "^5.1.7"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
