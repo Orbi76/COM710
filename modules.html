@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Modules</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="public/css/style.css">
   <script src="https://kit.fontawesome.com/b17e95f49f.js" crossorigin="anonymous"></script> <!-- Created my own account in fontawesome.com website to be able to display the icons in the footer section. -->
 </head>
 
@@ -32,7 +32,63 @@
 
         </div>
 
+        <h1>Modules Introduction</h1>
+
+        <table id="modules-table">
+            <thead>
+                <tr>
+                    <th>Id Code <button onclick="sortTable('idCode')">Sort</button></th>
+                    <th>Module Name <button onclick="sortTable('moduleName')">Sort</button></th>
+                    <th>Semester <button onclick="sortTable('semester')">Sort</button></th>
+                    <th>Description <button onclick="sortTable('description')">Sort</button></th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+                <% if (modulesData.length !== 0) { %>
+                    <% modulesData.forEach(module => { %>
+                        <tr>
+                            <td><%= module.idCode %></td>
+                            <td><%= module.moduleName %></td>
+                            <td><%= module.semester %></td>
+                            <td><%= module.description %></td>
+                        </tr>
+                    <% }); %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="4">No modules found</td>
+                    </tr>
+                <% } %>
+
+            
+                <!-- <tr>
+                    <td>1</td>
+                    <td>Module A</td>
+                    <td>Spring 2024</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Module B</td>
+                    <td>Fall 2023</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Module C</td>
+                    <td>Summer 2024</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Module D</td>
+                    <td>Winter 2023</td>
+                </tr> -->
+                <!-- Add more rows for other modules -->
+            </tbody>
+        </table>
+
        
+
+
 
 
 
@@ -84,7 +140,7 @@
 
     </div>
 
-<script src="myScript.js"></script>
+<script src="public/js/myScript.js"></script>
 
 
 </body>

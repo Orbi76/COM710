@@ -1,0 +1,18 @@
+
+1.
+Filled form to get connect to the database, the server has to start on terminal with the " node server.js" command.
+after teh command the consol confirm that the server is running on ... address and the MYSQL database connections is successfully.
+
+2.
+
+3.
+control c is the exit from terminal.
+
+npm install express mysql body-parser
+npm install ejs
+node server.js
+
+npm start
+
+
+

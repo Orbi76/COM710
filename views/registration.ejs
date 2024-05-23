@@ -1,0 +1,82 @@
+<%- include('partials/header', { title: 'Registration' }) %>
+
+
+ 
+
+    <div class="registrationContainer">
+
+
+        <% if (typeof success !== 'undefined') { %>
+            <% if (success) { %>
+                <div class="alert alert-success" id="regSuccess">Registration successful!</div>
+            <% } else { %>
+                <% if (error === 'duplicate') { %>
+                    <script>
+                        alert ("Registration failed. This email is already registered.");
+
+                    // <div class="alert alert-danger">Registration failed. This email is already registered.</div>
+                    </script>
+                <% } else { %>
+                    <div class="alert alert-danger">Registration failed. Please try again.</div>
+                <% } %>
+            <% } %>
+        <% } %>
+
+
+
+        <form action="http://localhost:3000/registration" id="regForm" method="post" name="regForm" onsubmit="return validateForm()">
+            <p>Registration Form.<br />
+        
+            <p>
+                <label for="fname">First name *:</label>
+                <input type="text" name="fname" id="fname" required/>
+            </p>
+
+            <p>
+                <label for="lname">Last name *: </label>
+                <input type="text" name="lname" id="lname" required/>
+            </p>
+
+            <p>
+                <label for="gender">Gender *:</label>
+
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="other">Other</label>
+                <input type="radio" id="other" name="gender" value="other"><br>
+            </p>
+
+            <p>
+                <label for="email">Email address *:</label>
+                <input type="email" name="email" id="email" required/>
+            </p>
+
+            <p>
+                <label for="mobile">Mobile number *:</label> 
+                <input type="tel" name="mobile" id="mobile" required/>
+            </p>
+            <p>
+                <label for="password"> Password *:</label>
+                <input type="password" name="password" id="password" required/>
+                <label for="password" id="passwordNote">(It has to be at least 8 character long and contain a capital, a small letter and a special character as well.)</label>
+            </p>
+            <p>
+                <label for="confirmPassword">Confirm Password *: </label>
+                <input type="password" name="confirmPassword" id="confirmPassword" required/>
+            </p>
+            <p>
+                <label for="comment">Comment</label>:
+                <textarea name="comment" id="comment" rows="4" cols="50"> </textarea> 
+            </p>
+        
+        
+            <input type="submit" value="Submit" id="submitButtonReg"/><br />
+        </form>
+
+    </div>
+
+
+
+<%- include('partials/footer') %>

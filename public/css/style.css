@@ -1,0 +1,269 @@
+/* General styles */
+body {
+    background: lightgrey;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #444;
+}
+
+p {
+    background-color: transparent;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: 2175B6;
+}
+
+/* Navigation */
+.navigation {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: rgb(172, 170, 168);
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+
+}
+
+.nav {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, font-size 0.3s, color 0.3s;
+    border-radius: 5px;
+
+}
+
+.nav:hover {
+    background-color: #cd1523;
+    font-size: larger;
+    color: black;
+    border-radius: 5px;
+
+}
+
+/* Header */
+.header {
+    background-color: aqua;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 30px;
+    background-image: url('https://www.solent.ac.uk/cms/media-library/images/hero-banners/homepage/806.xfb4e19ef.jpg?w=3840&q=100&f=webp');
+    background-size: cover;
+    color: #5a1f1f;
+}
+
+.headerParagraph {
+    font-size: 50px;
+    color: #5a1f1f;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Wrapper */
+#wrapper {
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: gold;
+}
+
+/* Profile */
+.profileImage {
+    background-color: azure;
+    height: 10vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: CACFD5;
+    color: rgb(30, 99, 171);
+}
+
+.sub-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Introduction */
+.introduction-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(55, 141, 89);
+    color: rgb(45, 125, 71);
+}
+
+.sud-introductionLeft, .sud-introductionRight {
+    padding: 20px;
+    background-color: beige;
+}
+
+.sud-introductionLeft {
+    width: 75%;
+}
+
+.sud-introductionRight {
+    width: 25%;
+}
+
+/* Footer */
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Changed to 'flex-start' for vertical alignment */
+    padding: 20px;
+    background-color: cornflowerblue;
+    background-image: url(https://www.solent.ac.uk/_next/static/media/wave.75775d05.png);
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: right top; /* Positions the image on the right */
+    background-size: contain; /* Scales the image to fit within the container */
+    color: white;
+    border-radius: 5px;
+}
+
+
+.sub-footer {
+    flex: 1;
+    padding: 20px;
+}
+
+
+
+/* Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 5px;
+    /* background-color: #2196F3; */
+    background-color: transparent;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+    border-radius: 10px;
+    margin: 0;
+
+}
+
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding: 0; /* Ensure no padding on images */
+    margin: 0; /* Ensure no margin on images */
+}
+
+/* Image sizes */
+#printerPicture, #compositLabPicture, #manufacturingLabPicture, #animationStudiosPicture {
+    width: 60vh;
+}
+
+/* Form notes */
+#passwordNote {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Registration success message */
+#regSuccess {
+    color: rgb(6, 146, 62);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/* Centering alert messages */
+.center-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.alert-success {
+    color: red; /* Change text color to red */
+    font-size: 24px;
+    padding: 20px;
+    border: 1px solid red;
+    background-color: #fff0f0;
+    border-radius: 5px;
+}
+
+#submitButtonReg{
+    color: rgb(28, 95, 167); 
+    font-size: 24px;
+    padding: 20px;
+    border: 1px solid red;
+    background-color: #fff0f0;
+    border-radius: 5px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+/* Centering .activityIntroduction */
+.activityIntroduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20vh; /* Full viewport height */
+    background-color: lightgrey; /* Optional: to match the body background */
+}
+
+.activityIntroduction h1, .activityIntroduction p {
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+
+

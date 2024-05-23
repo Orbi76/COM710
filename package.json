@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.9",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
     "libphonenumber-js": "^1.10.60",
     "mysql": "^2.18.1",

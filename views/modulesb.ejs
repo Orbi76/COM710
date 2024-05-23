@@ -1,0 +1,71 @@
+<%- include('partials/header', { title: 'Modules' }) %>
+
+<h1>Modules Introduction</h1>
+
+<table id="modules-table">
+    <thead>
+        <tr>
+            <th>Id Code <button onclick="sortTable(0)">Sort</button></th>
+            <th>Module Name <button onclick="sortTable(1)">Sort</button></th>
+            <th>Semester <button onclick="sortTable(2)">Sort</button></th>
+            <th>Description <button onclick="sortTable(3)">Sort</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (modulesData.length !== 0) { %>
+            <% modulesData.forEach(function(module) { %>
+                <tr>
+                    <td><%= module.idCode %></td>
+                    <td><%= module.moduleName %></td>
+                    <td><%= module.semester %></td>
+                    <td><%= module.description %></td>
+                </tr>
+            <% }); %>
+        <% } else { %>
+            <tr>
+                <td colspan="4">No modules found</td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+
+<%- include('partials/footer') %>
+
+<script>
+function sortTable(columnIndex) {
+    var table, rows, switching, i, x, y, shouldSwitch, direction, switchcount = 0;
+    table = document.getElementById("modules-table");
+    switching = true;
+    direction = "asc"; 
+    while (switching) {
+        switching = false;
+        rows = table.rows;
+        for (i = 1; i < (rows.length - 1); i++) {
+            shouldSwitch = false;
+            x = rows[i].getElementsByTagName("TD")[columnIndex];
+            y = rows[i + 1].getElementsByTagName("TD")[columnIndex];
+            if (direction == "asc") {
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            } else if (direction == "desc") {
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+        }
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            switchcount++;
+        } else {
+            if (switchcount == 0 && direction == "asc") {
+                direction = "desc";
+                switching = true;
+            }
+        }
+    }
+}
+</script>
